@@ -86,7 +86,7 @@ void loop() {
             if (header.indexOf("GET /5/on") >= 0) {
               Serial.println("Motor Right ON");
               motorRightState = "on";
-              reverseState = "off";
+              // CHANGE REVERSE STATE TO OFF
               digitalWrite(output14, HIGH);
             } else if (header.indexOf("GET /5/off") >= 0) {
               Serial.println("Motor Right OFF");
@@ -152,7 +152,7 @@ void loop() {
               client.println("<p><a href=\"/4/off\"><button class=\"button button2\">ON</button></a></p>");
             }
             client.println("<p>Reverse</p>");
-            if (reverseState == "off") {
+            if (//FILL IN THE CONDITION FOR REVERSE HERE) {
               client.println("<p><a href=\"/6/on\"><button class=\"button\">OFF</button></a></p>");
             } else {
               client.println("<p><a href=\"/6/off\"><button class=\"button button2\">ON</button></a></p>");
